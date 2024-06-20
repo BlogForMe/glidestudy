@@ -4,6 +4,7 @@
 
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+  <uses-permission android:name="android.permission.INTERNET"/>
   <application
       tools:ignore="MissingApplicationIcon"
       android:theme="@style/AppTheme">
@@ -15,7 +16,12 @@
         android:exported="false" />
     <activity
         android:name="com.bumptech.glide.test.DefaultFragmentActivity"
-        android:exported="false" />
+        android:exported="true" >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
     <activity
         android:name="com.bumptech.glide.test.ForceDarkOrLightModeActivity"
         android:exported="false" />
