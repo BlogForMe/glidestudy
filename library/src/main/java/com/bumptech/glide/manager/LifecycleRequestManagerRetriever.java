@@ -56,7 +56,7 @@ final class LifecycleRequestManagerRetriever {
 
             @Override
             public void onDestroy() {
-              lifecycleToRequestManager.remove(lifecycle);
+              lifecycleToRequestManager.remove(lifecycle); // 这里生命周期监听，只是为了删除，上面复用的对象
             }
           });
       // This is a bit of hack, we're going to start the RequestManager, but not the
